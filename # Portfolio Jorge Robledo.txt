@@ -1,0 +1,27 @@
+# Portfolio Jorge Robledo
+
+Bienvenido al portfolio profesional de **Jorge Robledo**.
+
+Este sitio muestra trabajos de fotografía, galería de imágenes, información sobre el estudio y un formulario de contacto funcional con EmailJS.
+
+## Características
+
+- Carrusel de imágenes destacado
+- Galería con modales individuales para cada foto
+- Sección "Quiénes somos"
+- Formulario de contacto en modal, conectado a EmailJS
+- Diseño responsivo y moderno
+
+## Ver online
+
+[Ver la página publicada en GitHub Pages](https://jluchorobledo.github.io/jrobledografica/)
+
+## Contacto
+
+- 📧 contacto@jorgerobledo.com
+- 📱 +56 9 4818 1288
+- Santiago, Chile
+
+---
+
+© 2025 Jorge Robledo Photography. Todos los derechos reservados.

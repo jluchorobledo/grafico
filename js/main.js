@@ -1,14 +1,17 @@
 // Autor: Diego Pazos
 
 // Configuración de ponentes y eventos
+// Si no usas 'speakers', puedes eliminar este bloque
+/*
 const speakers = [
     {
         name: 'Dr. Sarah Johnson',
         role: 'AI Research Lead',
         company: 'Tech Innovations',
         image: './assets/img/speaker1.jpg'
-    },
-   
+    }
+];
+*/
 
 const carouselImages = [
     {
@@ -278,9 +281,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Inicialización de EmailJS
+// Si ya inicializas EmailJS en el HTML, puedes eliminar esto
+/*
 (function() {
     emailjs.init("TU_USER_ID");
 })();
+*/
 
 // Modal creativa para galería
 document.addEventListener('DOMContentLoaded', function() {
@@ -290,31 +296,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const cerrarModal = document.getElementById('cerrar-modal');
     const fondoModal = document.getElementById('modal-fondo');
 
-    imagenes.forEach(img => {
-        img.addEventListener('click', () => {
-            modal.classList.add('activa');
-            modalImg.src = img.src;
-            modalImg.alt = img.alt;
+    if (imagenes && modal && modalImg && cerrarModal && fondoModal) {
+        imagenes.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.classList.add('activa');
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+            });
         });
-    });
 
-    cerrarModal.addEventListener('click', () => {
-        modal.classList.remove('activa');
-        modalImg.src = '';
-    });
-
-    fondoModal.addEventListener('click', () => {
-        modal.classList.remove('activa');
-        modalImg.src = '';
-    });
-
-    // Cerrar con ESC
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('activa')) {
+        cerrarModal.addEventListener('click', () => {
             modal.classList.remove('activa');
             modalImg.src = '';
-        }
-    });
+        });
+
+        fondoModal.addEventListener('click', () => {
+            modal.classList.remove('activa');
+            modalImg.src = '';
+        });
+
+        // Cerrar con ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('activa')) {
+                modal.classList.remove('activa');
+                modalImg.src = '';
+            }
+        });
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function() {

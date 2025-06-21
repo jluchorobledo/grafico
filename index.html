@@ -218,26 +218,29 @@
     </section>
       <!-- Sección de contacto -->
       <section id="contacto" class="contact-section">
-          <button class="contact-trigger" id="contactButton">
-              <span>Contáctanos</span>
-          </button>
-          
-          <div class="contact-form-container" id="contactForm">
-              <div class="contact-form">
-                  <button class="close-form" id="closeForm">×</button>
-                  <h2>Contáctanos</h2>
-                  <form id="contact-form" onSubmit="sendEmail(); return false" class="contact__form">
-    <input type="text" id="name" placeholder="Tu nombre" required class="contact__form-input">
-    <input type="email" id="email" placeholder="Tu email" required class="contact__form-input">
-    <textarea id="message" placeholder="Tu mensaje" required class="contact__form-input"></textarea>
-    <button type="submit" class="contact__form-button">
-        <i class="ri-send-plane-line"></i> Enviar Mensaje
-    </button>
-</form>
-                                    </div>
-                                </div>
-                                <div id="contacto-resultado"></div>
-                            </section>
+          <!-- Botón para abrir el modal -->
+<button class="contact-trigger" id="contactButton">
+    <span>Contáctanos</span>
+</button>
+
+<!-- Modal de contacto -->
+<div class="contact-form-container" id="contactForm">
+    <div class="contact-form">
+        <button class="close-form" id="closeForm">×</button>
+        <h2>Contáctanos</h2>
+        <form id="contact-form" onSubmit="sendEmail(); return false" class="contact__form">
+            <input type="text" id="name" placeholder="Tu nombre" required class="contact__form-input">
+            <input type="email" id="email" placeholder="Tu email" required class="contact__form-input">
+            <textarea id="message" placeholder="Tu mensaje" required class="contact__form-input"></textarea>
+            <button type="submit" class="contact__form-button">
+                <i class="ri-send-plane-line"></i> Enviar Mensaje
+            </button>
+        </form>
+        <!-- Aquí va el mensaje de éxito o error -->
+        <div id="contacto-resultado"></div>
+    </div>
+</div>
+      </section>
       <!-- Footer -->
       <footer class="footer">
           <div class="footer-content">

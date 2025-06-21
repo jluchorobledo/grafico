@@ -260,6 +260,41 @@ body {
 
 /* Contact Form Modal */
 .contact-form-container {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+.contact-form-container.active {
+    display: flex;
+}
+.contact-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 320px;
+    max-width: 90vw;
+    position: relative;
+}
+.close-form {
+    position: absolute;
+    top: 10px; right: 10px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+#contacto-resultado {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Contact Form Modal */
+.contact-form-container {
     position: fixed;
     top: 0;
     left: 0;

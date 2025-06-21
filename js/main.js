@@ -1,7 +1,6 @@
 // Autor: Diego Pazos
 
-// Configuración de ponentes y eventos
-// Si no usas 'speakers', puedes eliminar este bloque
+// Si no usas speakers, elimina la función loadSpeakers y el array
 /*
 const speakers = [
     {
@@ -75,14 +74,13 @@ function handleNavbarScroll() {
     });
 }
 
-// Cargar ponentes en mosaico
+// Elimina o comenta la función loadSpeakers si no usas speakers
+/*
 function loadSpeakers() {
     const gallery = document.querySelector('.mosaic-gallery');
-    
     speakers.forEach(speaker => {
         const speakerCard = document.createElement('article');
         speakerCard.className = 'speaker-card';
-        
         speakerCard.innerHTML = `
             <img src="${speaker.image}" alt="${speaker.name}">
             <div class="speaker-info">
@@ -91,10 +89,10 @@ function loadSpeakers() {
                 <p>${speaker.company}</p>
             </div>
         `;
-        
         gallery.appendChild(speakerCard);
     });
 }
+*/
 
 // Inicializar carrusel
 function initCarousel() {
@@ -290,13 +288,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Modal creativa para galería
 document.addEventListener('DOMContentLoaded', function() {
+    // Modal galería
     const imagenes = document.querySelectorAll('.galeria-mosaico img');
     const modal = document.getElementById('modal-galeria');
     const modalImg = document.getElementById('modal-img');
     const cerrarModal = document.getElementById('cerrar-modal');
     const fondoModal = document.getElementById('modal-fondo');
 
-    if (imagenes && modal && modalImg && cerrarModal && fondoModal) {
+    if (imagenes.length && modal && modalImg && cerrarModal && fondoModal) {
         imagenes.forEach(img => {
             img.addEventListener('click', () => {
                 modal.classList.add('activa');
@@ -323,9 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
 
-document.addEventListener('DOMContentLoaded', function() {
     // Modal de contacto
     const abrirContacto = document.getElementById('abrir-contacto-modal');
     const modalContacto = document.getElementById('modal-contacto');
@@ -354,7 +351,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if(form){
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-
             sendEmail();
         });
     }
